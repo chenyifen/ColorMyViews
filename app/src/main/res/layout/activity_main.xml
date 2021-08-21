@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/mid_margin_16"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/box_one"
+        style="@style/WhiteBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mid_margin_16"
+        android:text="@string/box_one_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/box_two"
+        style="@style/WhiteBox"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_margin="@dimen/mid_margin_16"
+        android:text="@string/box_two_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_one" />
+
+    <Button
+        android:id="@+id/box_three"
+        style="@style/WhiteBox"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/mid_margin_16"
+        android:layout_marginRight="@dimen/mid_margin_16"
+        android:text="Box Three"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/box_four"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/box_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_one"
+        app:layout_constraintTop_toTopOf="@id/box_two" />
+
+    <Button
+        android:id="@+id/box_four"
+        style="@style/WhiteBox"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/mid_margin_16"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/mid_margin_16"
+        android:text="Box Four"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/box_five"
+        app:layout_constraintLeft_toRightOf="@id/box_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_three" />
+
+    <Button
+        android:id="@+id/box_five"
+        style="@style/WhiteBox"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+
+        android:layout_marginLeft="@dimen/mid_margin_16"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/mid_margin_16"
+        android:text="Box Five"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="@id/box_two"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/box_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_four" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mid_margin_16"
+        android:layout_marginTop="40dp"
+        android:text="This is a game:"
+        android:textColor="#070707"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_two" />
+
+    <TextView
+        android:id="@+id/hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/mid_margin_16"
+        android:text="Tap the screen and buttons."
+        app:layout_constraintBaseline_toBaselineOf="@id/title_text"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
